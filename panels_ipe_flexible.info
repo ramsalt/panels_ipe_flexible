@@ -1,0 +1,6 @@
+name = Panels IPE Flexible
+description = TODO: Description of module
+dependencies[] = panels_ipe
+package = Panels
+core = 7.x
+files[] = tests/panels_ipe_flexible.test

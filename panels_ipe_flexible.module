@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file panels_ipe_flexible.module
+ * TODO: Enter file description here.
+ */
+
+/**
+ * Implementation of hook_ctools_plugin_directory().
+ */
+function panels_ipe_flexible_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'panels' && $plugin == 'display_renderers') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function panels_ipe_flexible_ctools_plugin_api($owner, $api) {
+	if ($owner == 'panels' && $api == 'pipelines') {
+	    return array(
+			'version' => 1,
+			'path' => drupal_get_path('module', 'panels_ipe_flexible') . '/includes',
+	    );
+	}
+}
+
